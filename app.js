@@ -36,7 +36,7 @@ app.use(express.json());
 
 let atlas_db=`${process.env.ATLAS_DB}`;
 let secret=`${process.env.SECRET}`;
-
+let port=process.env.PORT;
 const store= MongoStore.create({
     mongoUrl:atlas_db,
     crypto: {
@@ -85,7 +85,7 @@ async function main(){
 }
 
 
-app.listen(5050, ()=>{
+app.listen(port, ()=>{
     console.log("Successfully Connected to the port of 5050");
 })
 
