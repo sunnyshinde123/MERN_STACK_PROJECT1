@@ -139,10 +139,10 @@ app.all("*",(req, res, next)=>{
 })
 
 app.use((err, req, res, next) => {
-    if (err.status === 404) {
-      res.status(404);
-      res.set("Content-Type", "text/plain");
-      res.send("Page not found.");
-    }
+    // if (err.status === 404) {
+    //   res.status(404);
+    //   res.set("Content-Type", "text/plain");
+    //   res.render("");
+    // }
     res.render("error.ejs", {err});
 });
