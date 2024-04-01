@@ -45,7 +45,7 @@ module.exports.showRoute = async(req, res)=>{
     }).populate("owner");
     if(!data){
         req.flash("error", "Listing you requested does not exists");
-        res.redirect("/listing");
+        return res.redirect("/listing");
     }
     res.render("listing/show.ejs", {data});
 };
