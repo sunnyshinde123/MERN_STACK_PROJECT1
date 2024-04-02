@@ -139,8 +139,6 @@ app.all("*",(req, res, next)=>{
 })
 
 app.use((err, req, res, next) => {
-    if (err.status === 404) {
-      res.render("error.ejs", {err});
-    }
-    res.render("error.ejs", {err});
+    let {status=500, message="Internal server Error"}  = err;
+    res.status(status).render("error.ejs", {err});
 });
