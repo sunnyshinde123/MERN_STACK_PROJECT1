@@ -25,7 +25,7 @@ router.route("/")
 // router.get("/", wrapAsync(listingController.index));
 
 //New route
-router.get("/new", isLoggedIn, wrapAsync(listingController.newRoute));
+router.get("/new", isLoggedIn, listingController.newRoute);
 
 
 router.route("/:id")
