@@ -149,3 +149,10 @@ label{
 }
 
 
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 3rem;
+}
+
+
